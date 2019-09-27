@@ -8,7 +8,7 @@ cisco_netconnect = ConnectHandler(
     username = input("Username:"),
     password = getpass(),
     device_type = "cisco_ios",
-    session_log ="Cisco_SSH_Log.txt",
+    session_log = "Cisco_SSH_Log.txt",
     )
 
 print (cisco_netconnect.find_prompt())
