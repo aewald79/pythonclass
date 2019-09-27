@@ -3,7 +3,6 @@ from netmiko import ConnectHandler
 from getpass import getpass
 
 #Variables
-
 cisco_devices = [ "Example1", "Example2"] #Replace with your cisco device hostnames
 ssh_username = input("Username:")
 ssh_pass = getpass()
