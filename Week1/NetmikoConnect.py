@@ -1,8 +1,8 @@
-#loading python modules
+#Loading python modules
 from netmiko import ConnectHandler
 from getpass import getpass
 
-#Cisco SSH Connection
+#Cisco SSH connection
 cisco_netconnect = ConnectHandler(
     host = "example.host",
     username = input("Username:"),
@@ -12,3 +12,4 @@ cisco_netconnect = ConnectHandler(
     )
 
 print (cisco_netconnect.find_prompt())
+cisco_netconnect.disconnect()
