@@ -1,4 +1,4 @@
-#loading python modules
+#Loading python modules
 from netmiko import ConnectHandler
 from getpass import getpass
 
@@ -7,7 +7,7 @@ cisco_devices = [ "Example1", "Example2"] #Replace with your cisco device hostna
 ssh_username = input("Username:")
 ssh_pass = getpass()
 
-#Cisco SSH Connection
+#Cisco SSH connection
 for device_host in cisco_devices:
     cisco_netconnect = ConnectHandler(
         host = device_host,
@@ -17,5 +17,8 @@ for device_host in cisco_devices:
         session_log = "Cisco_SSH_Log.txt",
     )
     print (cisco_netconnect.find_prompt())
+    #Prints show version to txt file
     with open(device_host + "_show_version.txt","a") as f:
         print (cisco_netconnect.send_command("show version"),file=f)
+    #Disconnects session
+    cisco_netconnect.disconnect()
