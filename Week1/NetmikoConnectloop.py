@@ -14,6 +14,6 @@ for device_host in cisco_devices:
         username = ssh_username,
         password = ssh_pass,
         device_type = "cisco_ios",
-        session_log ="Cisco_SSH_Log.txt",
+        session_log = "Cisco_SSH_Log.txt",
     )
     print (cisco_netconnect.find_prompt())
