@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 #loading python modules
 from netmiko import ConnectHandler
 from getpass import getpass
