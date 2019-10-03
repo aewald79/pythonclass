@@ -11,5 +11,5 @@ cisco_netconnect = ConnectHandler(
     session_log = "Cisco_SSH_Log.txt",
     )
 
- print (cisco_netconnect.send_command("ping"))
+print (cisco_netconnect.send_command("ping"))
 cisco_netconnect.disconnect()
