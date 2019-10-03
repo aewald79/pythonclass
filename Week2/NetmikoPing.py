@@ -11,5 +11,20 @@ cisco_netconnect = ConnectHandler(
     session_log = "Cisco_SSH_Log.txt",
     )
 
-print (cisco_netconnect.send_command("ping"))
+output = cisco_netconnect.send_command_timing(
+    "ping", strip_prompt=False, strip_command=False
+)
+output += cisco_netconnect.send_command_timing("\n", strip_prompt=False, strip_command=False)
+output += cisco_netconnect.send_command_timing(
+    "8.8.8.8", strip_prompt=False, strip_command=False
+)
+output += cisco_netconnect.send_command_timing("\n", strip_prompt=False, strip_command=False)
+output += cisco_netconnect.send_command_timing("\n", strip_prompt=False, strip_command=False)
+output += cisco_netconnect.send_command_timing("\n", strip_prompt=False, strip_command=False)
+output += cisco_netconnect.send_command_timing("\n", strip_prompt=False, strip_command=False)
+output += cisco_netconnect.send_command_timing("\n", strip_prompt=False, strip_command=False)
 cisco_netconnect.disconnect()
+
+print()
+print(output)
+print()
