@@ -4,7 +4,7 @@ from getpass import getpass
 
 #Cisco SSH connection
 cisco_netconnect = ConnectHandler(
-    host = "example.host",
+    host = "cisco4.lasthop.io",
     username = input("Username:"),
     password = getpass(),
     device_type = "cisco_ios",
